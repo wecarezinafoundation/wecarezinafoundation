@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We care Zino Foundation</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    image-orientation:center;
+  }
+    .image-gallery img {
+    width: 370px;
+    height: auto;
+  }
+
+.video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            10adding: 20px;
+        }
+        .video-item {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+        /* Header styles */
+        header {
+            background: linear-gradient(to right, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Main content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .intro h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+    
+    
+        }
+        /* Donation options */
+        .donation-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .drop-cap::first-letter {
+    float: left;
+    font-size: 4em;
+    line-height: 1;
+    margin-right: 0.1em;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+        .donation-form {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .bank-details {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Form styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .amount-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .amount-option {
+            padding: 0.8rem 1.5rem;
+            background: #f1f1f1;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .amount-option:hover, .amount-option.active {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background 0.3s;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            background: #c0392b;
+        }
+        
+        /* Bank details styles */
+        .bank-info {
+            margin-bottom: 1.5rem;
+        }
+        
+        .bank-info p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight {
+            font-weight: 600;
+            color: #e74c3c;
+        }
+        
+        .qr-code {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        
+        .qr-code img {
+            max-width: 200px;
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+            background: white;
+        }
+        
+        .qr-code p {
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .donation-options {
+                flex-direction: column;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">We care Zina Foundation</div><img src="logo.jpg" alt="company Logo" width="200" height="150">
+        <div class="tagline">Together we can make a difference</div>
+        
+    </header>
+    
+    
+    <main class="container">
+        <section class="intro">
+            <h2><bold>Support Our Cause</bold></h2>
+            <p class="drop-cap">  Your generous donation will help us continue our mission to provide education, healthcare, and support to those in need. Every contribution makes a meaningful impact.As part of our mission to create lasting change, we are proud to introduce our Borehole Project in the Upper East Region. This initiative aims to provide clean and accessible water to local communities, improving health and daily living conditions.. By investing in reliable water sources, we are investing in better health, education, and livelihoods for the future. We are committed to supporting sustainable development and empowering residents through this vital resource.
+
+Thank you for your support as we work together to make a lasting impact.
+
+Join us in making a difference!</p>
+<div class="image-gallery">
+  <img src="Di2.jpg" alt="Image 1" style="display: inline-block; margin: 10px;">
+  <img src="Di3.jpg" alt="Image 2" style="display: inline-block; margin: 10px;">
+  <img src="Di4.jpg" alt="Image 3" style="display: inline-block; margin: 10px;">
+  <img src="Di10.jpg" alt="Image 4" style="display: inline-block; margin: 10px;">
+  <img src="Di6.jpg" alt="Image 5" style="display: inline-block; margin: 10px;">
+  <img src="Di7.jpg" alt="Image 6" style="display: inline-block; margin: 10px;">
+</div>
+
+<br>We are a non-profit organization committed to improving the lives of the less privileged.
+Our latest project aims to provide
+National Health Insurance Cards (NHIS) to 70 individuals and families who cannot afford them.<br>
+         <h3> Mission</h3>
+         <p> To serve a catalyst for postive change, connecting donirs, volunteers, and community organization to address the complex needs of the less privileged.</p>
+       
+</div>
+
+</video><br>
+         <h4><bold>Vision</bold></h4>
+         <p>Creating a society where kindness, compassionate, and generosity inspire positive change.</p><br>
+         <h5><bold>Core Value</bold></h5>
+         <p><li>Compassionate: We believe in treating all individual with kindness, respect and empathy.</li>
+            <li>Intergrity: We operate with transparency, accountabiility and honesty in all our interactions.</li>
+         </p> <br> 
+         <div class="video-grid">
+        <!-- Video 1 -->
+        <div class="video-item">
+            <video controls>
+                <source src="D4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3> WCZF Video 1</h3>
+        </div>
+        
+        <!-- Video 2 -->
+        <div class="video-item">
+            <video controls>
+                <source src="D10.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3> WCZF Video 2</h3>
+        </div>
+        
+        <!-- Video 3 -->
+        <div class="video-item">
+            <video controls>
+                <source src="D13.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3> WCZF Video 3</h3>
+        </div>
+    </div>
+
+        </section>
+        
+         
+
+        
+        <div class="donation-options">
+            <section class="donation-form">
+                <h3 class="section-title">Online Donation</h3>
+                <form id="donationForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Donation Amount (USD)</label>
+                        <div class="amount-options">
+                            <button type="button" class="amount-option">$10</button>
+                            <button type="button" class="amount-option">$25</button>
+                            <button type="button" class="amount-option">$50</button>
+                            <button type="button" class="amount-option">$100</button>
+                            <button type="button" class="amount-option">$250</button>
+                        </div>
+                        <input type="text" id="customAmount" placeholder="Or enter custom amount">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="frequency">Donation Frequency</label>
+                        <select id="frequency" name="frequency">
+                            <option value="one-time">One-time donation</option>
+                            <option value="monthly">Monthly donation</option>
+                            <option value="quarterly">Quarterly donation</option>
+                            <option value="yearly">Yearly donation</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn">Donate Now</button>
+                </form>
+            </section>
+            
+            <section class="bank-details">
+                <h3 class="section-title">Mobile Moiney Transfer</h3>
+                <div class="bank-info">
+                    <p>You can also support us by making a direct mobile money transfer:</p>
+                    <p><span class="highlight">Account Name:</span> We care Zina Foundation</p>
+                    
+                    <p><span class="highlight">Account Number:</span> 0538840456</p>
+                    
+
+                
+                </div>
+                
+                <div class="qr-code">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=HopeFoundationDonationAccount:1234567890" alt="QR Code for Mobile Money Transfer">
+                    <p>Scan to get our mobile money details</p>
+                </div>
+                
+                <div class="additional-info">
+                    <p><strong>Important:</strong> Please include your name or email in the transfer reference so we can thank you properly.</p>
+                    <p>For international transfers, intermediary bank details may be required. Please contact your bank for assistance.</p>
+                </div>
+
+            </section>
+        </div>
+        <a href="https://www.tiktok.com/@wecarezinafoundation" target="_blank">
+    <img src="tiktok-logo.jpg" alt="TikTok" width="100">Follow Us on TikTok
+</a>
+    </main>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Our Programs</a>
+          
+        </div>
+        <p>&copy; We care Zina Foundation. All rights reserved. Registered Charity .</p>
+    </footer>
+    
+    <script>
+        // Simple script to handle amount selection
+        document.addEventListener('DOMContentLoaded', function() {
+            const amountOptions = document.querySelectorAll('.amount-option');
+            const customAmount = document.getElementById('customAmount');
+            
+            amountOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove active class from all options
+                    amountOptions.forEach(opt => opt.classList.remove('active'));
+                    
+                    // Add active class to clicked option
+                    this.classList.add('active');
+                    
+                    // Set custom amount value to empty
+                    customAmount.value = '';
+                    
+                    // Alternatively, you could set the custom amount to the selected value
+                    // customAmount.value = this.textContent.replace('$', '');
+                });
+            });
+            
+            customAmount.addEventListener('focus', function() {
+                // Remove active class from all options when custom amount is focused
+                amountOptions.forEach(opt => opt.classList.remove('active'));
+            });
+            
+            // Form submission handling
+            document.getElementById('donationForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your donation! In a real implementation, this would process the payment.');
+                // Here you would typically integrate with a payment processor like Stripe or PayPal
+            });
+        });
+    </script>
+</body>
+</html>
